@@ -7,9 +7,9 @@ let body = document.querySelector ( 'body' )
 let app = create (
 
     'div',
+
     {
         id: 'app',
-        // style: 'width: 100px; height: 100px; background: red;'
         class: [
 
             'bg-red', 
@@ -17,10 +17,11 @@ let app = create (
 
         ].toString().replace ( /[\,]/gm, ' ' )
     },
-    'app'
+    
+    'app',
 
-)
+) 
 
 mount ( app, body )
 console.clear()
-console.log( app )
+console.log ( app.properties )
