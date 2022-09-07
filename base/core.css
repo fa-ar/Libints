@@ -166,10 +166,15 @@ body {
 .d-f {display: flex;}
 .d-g {display: grid;}
 
+/* grid areas */
+.header {grid-area: header;}
+.main {grid-area: main;}
+.sideL {grid-area: sideL;}
+.sideR {grid-area: sideR;}
+.footer {grid-area: footer;}
 
 /* grid */
-.g-cl {grid-template-columns: repeat(12, minmax(0, 1fr));}
-.g-rw {}
+
 
 /* flex */
 .f-1 {flex: 1;}

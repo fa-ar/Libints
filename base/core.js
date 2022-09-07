@@ -1,6 +1,8 @@
 /// main function ///
 function create ( tag, properties=null, children='' ) {
 
+    console.log ( properties )
+
     // return the virtual node
     return {
 
@@ -43,7 +45,7 @@ function mount ( vnode, container ) {
         } )
 
     }
-
+    
     // mount to the dom
     container.appendChild ( element )
     
