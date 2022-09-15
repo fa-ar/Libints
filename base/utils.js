@@ -1,5 +1,5 @@
 
-/// function to process all the classes inside a component 
+/// function to process all the CSS classes inside a component 
 /// keeping an opinionated style 
 
 function applyClasses ( classes=[] ) {
@@ -12,11 +12,38 @@ function applyClasses ( classes=[] ) {
 
     else {
         
-        return classes = classes.toString().replace(/[\,]/gm, ' ')
+        return classes.toString().replace(/[\,]/gm, ' ')
 
     }
 
 }
 
+/// function to process all the events associated with all the events of 
+/// a custom-element created
+function applyEvents ( events=[] ) {  }
 
-export { applyClasses }
+
+/// get 
+function getElement ( id ) { 
+
+    return document.getElementById ( id )
+
+ }
+
+
+
+/*// event handler
+function handleMethods ( this, methods=[] ) {
+
+    let target = this
+
+    return item = new Proxy ( this, methods )
+
+} 
+*/
+
+
+///
+///
+
+export { applyClasses, applyEvents  }

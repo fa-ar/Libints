@@ -10,11 +10,14 @@ let app = create (
     'div',
 
     {
-        id: 'app',
-        class: applyClasses ( [
+        'id': 'app',
+        'class': applyClasses ( [
 
+            'w-100',
+            'h-100',
             'bg-red', 
-            'pd-a'
+            'pd-0',
+            'mg-0'
             
 
         ] )
@@ -27,15 +30,14 @@ let app = create (
             'header',
 
             {
-                id: 'test',
-                class: applyClasses ( [
+                'id': 'test',
+                'class': applyClasses ( [
 
                     'header',
                     'bg-blue',
-                    'pd-a',
-                    'mg-a'
+                    'pd-0',
+                    'mg-0'
                     
-
                 ] )
             },
 
@@ -49,12 +51,12 @@ let app = create (
             'nav',
             
             {
-                id: 'nav',
-                class: applyClasses ( [
+                'id': 'nav',
+                'class': applyClasses ( [
 
                     'bg-blue',
-                    'pd-a',
-                    'mg-a'
+                    'pd-0',
+                    'mg-0'
                 
                 ] )
             },
@@ -63,32 +65,102 @@ let app = create (
 
 
         ),
-
+        
+        /// left aside
         create (
 
             'aside',
 
             {
-                id: 'sideL',
-                class: applyClasses ( [
+                'id': 'sideL',
+                'class': applyClasses ( [
 
                     'bg-blue',
-                    'pd-a',
-                    'mg-a'
+                    'pd-0',
+                    'mg-0'
 
                 ] )
             },
 
             'asideL'
 
-        )
+        ),
 
+        /// right aside
+        create (
+
+            'aside',
+
+            {
+                'id': 'sideR',
+                'class': applyClasses ( [
+
+                    'bg-blue',
+                    'pd-0',
+                    'mg-0'
+
+                ] )
+            },
+
+            'asideR'
+
+        ),
+        
+        /// footer aka "control center"
+        create (
+
+            'footer',
+
+            {
+                'id': 'footer',
+                'class': applyClasses ( [
+
+                    'bg-blue',
+                    'pd-0',
+                    'mg-0'
+
+                ] )
+            },
+
+            'footer'
+
+        ),
+
+        create (
+
+            'button',
+
+            {
+                'id': 'test-elem',
+                'dataAttr': 'test-data',
+                'class': applyClasses ( [
+
+                    'bg-green',
+                    'pd-a',
+                    'mg-a',
+                    'bw-n',
+                    'br-bb'
+
+                ] ),
+                
+                'onclick': 'console.log( this.dataset )'
+                
+            },
+
+            'testing-reactivity',
+
+        )
 
     ],
 
 ) 
 
 console.clear()
-console.log(typeof app)
+//console.log(app)
+console.log(app.children[5])
+
+
 mount ( app, body )
-console.clear()
+
+
+

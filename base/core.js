@@ -1,5 +1,5 @@
 /// main function ///
-function create ( tag, properties=null, children='' ) {
+function create ( tag, properties=null, children=[''] ) {
 
     console.log ( properties )
 
@@ -8,7 +8,7 @@ function create ( tag, properties=null, children='' ) {
 
         tag, 
         properties,
-        children
+        children,
 
     } 
 
@@ -132,5 +132,17 @@ function patch ( node1, node2 ) {
 }
 
 
+/// function in charge of the reactivity 
+function watch ( fn ) {
 
-export { create, mount, unmount, patch } 
+    active = fn
+    
+    fn()
+
+    active = null
+
+}
+
+
+/// esxports
+export { create, mount, unmount, patch, watch } 
