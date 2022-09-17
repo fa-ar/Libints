@@ -1,7 +1,6 @@
 /// main function ///
-function create ( tag, properties=null, children=[''] ) {
+function create ( tag, properties=null, children=[''], ...data ) {
 
-    console.log ( properties )
 
     // return the virtual node
     return {
@@ -9,6 +8,12 @@ function create ( tag, properties=null, children=[''] ) {
         tag, 
         properties,
         children,
+        
+        get methods() {
+
+            return this.methods 
+    
+        }
 
     } 
 

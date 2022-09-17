@@ -126,13 +126,14 @@ let app = create (
 
         ),
 
+        // button for testing
         create (
 
             'button',
 
             {
                 'id': 'test-elem',
-                'dataAttr': 'test-data',
+                'data-counter': 0,
                 'class': applyClasses ( [
 
                     'bg-green',
@@ -143,20 +144,44 @@ let app = create (
 
                 ] ),
                 
-                'onclick': 'console.log( this.dataset )'
+                'onclick': '{this.dataset.counter++, console.log ( this.dataset.counter ) }' 
                 
             },
 
-            'testing-reactivity',
+            'counter: ',
 
+        ),
+
+        create (
+
+            'button',
+        
+            {
+                'id': 'test-spam',
+                'data-counter': 0,
+                'class': applyClasses ( [
+        
+                    'bg-yellow',
+                    'pd-a',
+                    'br-bb'
+                ] ),
+                'onclick': 'console.log(this.data)' 
+        
+            },
+            
+            'test-counter2: '
+        
         )
 
     ],
 
 ) 
 
+
+
 console.clear()
-//console.log(app)
+console.log(app)
+console.log(app.children[0])
 console.log(app.children[5])
 
 

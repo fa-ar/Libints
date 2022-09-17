@@ -20,7 +20,11 @@ function applyClasses ( classes=[] ) {
 
 /// function to process all the events associated with all the events of 
 /// a custom-element created
-function applyEvents ( events=[] ) {  }
+function applyEvents ( events=[] ) { 
+
+    
+
+ }
 
 
 /// get 
@@ -30,20 +34,10 @@ function getElement ( id ) {
 
  }
 
-
-
-/*// event handler
-function handleMethods ( this, methods=[] ) {
-
-    let target = this
-
-    return item = new Proxy ( this, methods )
-
-} 
-*/
-
+ 
 
 ///
-///
+
+
 
 export { applyClasses, applyEvents  }
